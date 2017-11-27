@@ -37,7 +37,7 @@
 	<?php
 			//DB 연결 시도
 			try{
-				$db = new PDO("mysql:dbname=webapp;host=localhost", "webapp", "webapp");
+				$db = new PDO("mysql:dbname=webapp;host=localhost", "root", "root");
 				$db -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 				$db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				//print_r("DB 연결 성공");
@@ -111,7 +111,7 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="search.php">글쓰기</a></li>
-					<li><a href="#">게시판</a></li>
+					<li><a href="./board/board.html">게시판</a></li>
 					<li><a href="#">포럼</a></li>
     			</ul>
 				<!-- @ 프로필 아이콘 오른쪽 끝에 추가, 클릭 시 프로필 수정 페이지로 이동 -->
