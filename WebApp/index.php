@@ -12,9 +12,9 @@
 	11/08(강태욱) : html->php 대체 (∵ html파일의 필요성을 느끼지 못함, 실행시 바로 시작페이지.)
 	11/08(강태욱) : 부트 스트랩 적용 (∵  css url로 불러오기) 참고사이트: https://www.w3schools.com/bootstrap/default.asp
 	11/08(강태욱) : mysql-server 구축완료 및 자동실행.
-		★★★★★ DB명:webapp, DB사용자명:webapp, password:webapp 
+		★★★★★ DB명:webapp, DB사용자명:webapp, password:webapp
 		★★★★★ 밑에 터미널에 입력하시면 됩니다. Ex) mysql -u webapp -p
-	11/08(강태욱) : css는 수정시 href="index.css?ver1.0" <-ver을 고쳐줘야 적용됩니다. 예전 버전이 남아있어 적용안되는 현상발생 
+	11/08(강태욱) : css는 수정시 href="index.css?ver1.0" <-ver을 고쳐줘야 적용됩니다. 예전 버전이 남아있어 적용안되는 현상발생
 	11/09(강태욱) : 로그인후 화면구성(HTML).
 	11/10(강태욱) : 로그인전 화면구성 중...
 	11/10(최민혁) : Search, writing 페이지, 메세지 몇개 추가 + 스타일 수정 원하는부분 주석에 @ 붙여놓을게요
@@ -31,10 +31,10 @@
 		<link rel="shortcut icon" href="box.png" type="image/png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="index.css?ver1.19" type="text/css">		
+		<link rel="stylesheet" href="index.css?ver1.19" type="text/css">
 	</head>
 	<body>
-	<?php	
+	<?php
 			//DB 연결 시도
 			try{
 				$db = new PDO("mysql:dbname=webapp;host=localhost", "webapp", "webapp");
@@ -54,10 +54,10 @@
 					<strong>Danger!</strong> DB 연결 실패...
 				 </div>
 	<?php
-				//print_r("DB 연결 실패");	
+				//print_r("DB 연결 실패");
 			}
-	?>	
-		
+	?>
+
 	<?php
 		$b_login = false;
 		if($b_login==true){
@@ -70,13 +70,13 @@
 					</div>
 					<ul class="nav navbar-nav">
 					  <li class="active"><a href="#">Home</a></li>
-					  <li><a href="#">글쓰기</a></li> <!-- 로그인해야 사용가능하다고 팝업 --> 
+					  <li><a href="#">글쓰기</a></li> <!-- 로그인해야 사용가능하다고 팝업 -->
 					  <li><a href="#">게시판</a></li>
 					  <li><a href="#">포럼</a></li>
 					</ul>
 				</div>
-			</nav>	
-			
+			</nav>
+
 <!-- 로그인창 -->
 			<div class="message">
 				<p>
@@ -97,12 +97,12 @@
           			<button class="btn btn-lg">login</button>
 					<button class="btn btn-lg">Sign Up</button>
 					<button class="btn btn-lg">ID/PW</button>
-				</div>  
-			  </div>      
+				</div>
+			  </div>
 			</div>
 	<?php
 		}else{
-	?>	
+	?>
 		<nav class="navbar navbar-inverse">
   			<div class="container-fluid">
     			<div class="navbar-header">
@@ -117,13 +117,13 @@
 				<!-- @ 프로필 아이콘 오른쪽 끝에 추가, 클릭 시 프로필 수정 페이지로 이동 -->
   			</div>
 		</nav>
-		
+
 		<div class="jumbotron text-center" id="headlin">
 			<br/>
   			<h1>Try Report Assistant!</h1>
-  			<p>Report Assistant는 리포트 작성을 보조해 주며 보고서를 저장해주는 리포지토리입니다.<br/> 개인 목적을 위한 보고서부터 과제 및 회사 보고서까지 당신은 보고서를 저장하거나 남이 쓴 보고서를 읽고 포럼에서 의견을 교환할 수 있습니다.</p> 
+  			<p>Report Assistant는 리포트 작성을 보조해 주며 보고서를 저장해주는 리포지토리입니다.<br/> 개인 목적을 위한 보고서부터 과제 및 회사 보고서까지 당신은 보고서를 저장하거나 남이 쓴 보고서를 읽고 포럼에서 의견을 교환할 수 있습니다.</p>
 		</div>
-		
+
 		<div class="container">
     		<div class="col-sm-12">
 				<form action="search.php" method="POST">
@@ -134,12 +134,12 @@
 			<div class="col-sm-12 thumbnail text-center" id="keyword_box" >
 				<!-- php, 혹은 javascript를 이용하여 동적으로 최근 검색어를 출력 -->
 			</div>
-			
+
 		</div>
 	<?php
 		}
 	?>
-		
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src='index.js'></script>
